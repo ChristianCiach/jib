@@ -58,7 +58,7 @@ public class ContainerParameters {
 
   @Inject
   public ContainerParameters(ObjectFactory objectFactory) {
-    labels = objectFactory.mapProperty(String.class, String.class).empty();
+    labels = objectFactory.mapProperty(String.class, String.class);
     filesModificationTime = objectFactory.property(String.class).convention("EPOCH_PLUS_SECOND");
     creationTime = objectFactory.property(String.class).convention("EPOCH");
     mainClass = objectFactory.property(String.class);
